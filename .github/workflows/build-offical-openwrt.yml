@@ -85,10 +85,6 @@ jobs:
         # chmod +x ../scripts/enable-rpi4-wifi.sh
         # ../scripts/enable-rpi4-wifi.sh
 
-    - name: SSH Connection To Actions
-      uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
-
     - name: Download Package
       id: package
       run: |
