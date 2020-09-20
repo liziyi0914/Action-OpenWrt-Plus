@@ -55,11 +55,11 @@ jobs:
         sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-1804) flex bison
         sudo wget http://www.tcpdump.org/release/libpcap-1.9.1.tar.gz
         sudo tar -zxvf libpcap-1.9.1.tar.gz
-        sudo cd libpcap-1.9.1
+        cd libpcap-1.9.1
         sudo ./configure
         sudo make
         sudo make install
-        sudo cd ../
+        cd ../
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
